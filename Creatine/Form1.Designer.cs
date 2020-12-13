@@ -58,9 +58,10 @@
             this.radioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(826, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1114, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -102,10 +103,13 @@
             this.cboLists.Name = "cboLists";
             this.cboLists.Size = new System.Drawing.Size(228, 21);
             this.cboLists.TabIndex = 1;
+            this.cboLists.SelectedIndexChanged += new System.EventHandler(this.cboLists_SelectedIndexChanged);
             // 
             // cboServiceList
             // 
             this.cboServiceList.FormattingEnabled = true;
+            this.cboServiceList.Items.AddRange(new object[] {
+            "YouTube Lucky"});
             this.cboServiceList.Location = new System.Drawing.Point(61, 61);
             this.cboServiceList.Name = "cboServiceList";
             this.cboServiceList.Size = new System.Drawing.Size(179, 21);
@@ -132,7 +136,7 @@
             this.lstItems.FormattingEnabled = true;
             this.lstItems.Location = new System.Drawing.Point(12, 144);
             this.lstItems.Name = "lstItems";
-            this.lstItems.Size = new System.Drawing.Size(228, 134);
+            this.lstItems.Size = new System.Drawing.Size(228, 485);
             this.lstItems.TabIndex = 5;
             this.lstItems.SelectedIndexChanged += new System.EventHandler(this.lstItems_SelectedIndexChanged);
             // 
@@ -183,14 +187,14 @@
             this.webBrowser1.Location = new System.Drawing.Point(246, 64);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(599, 240);
+            this.webBrowser1.Size = new System.Drawing.Size(856, 565);
             this.webBrowser1.TabIndex = 11;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 367);
+            this.ClientSize = new System.Drawing.Size(1114, 644);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnSearch);
@@ -205,7 +209,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Creatine 2.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
