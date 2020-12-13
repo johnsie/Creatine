@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importTxtFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +46,8 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.btnTmp3 = new System.Windows.Forms.Button();
+            this.tmrCheckURL = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -109,11 +112,13 @@
             // 
             this.cboServiceList.FormattingEnabled = true;
             this.cboServiceList.Items.AddRange(new object[] {
-            "YouTube Lucky"});
+            "YouTube Lucky",
+            "Normal YouTube"});
             this.cboServiceList.Location = new System.Drawing.Point(61, 61);
             this.cboServiceList.Name = "cboServiceList";
             this.cboServiceList.Size = new System.Drawing.Size(179, 21);
             this.cboServiceList.TabIndex = 2;
+            this.cboServiceList.SelectedIndexChanged += new System.EventHandler(this.cboServiceList_SelectedIndexChanged);
             // 
             // textBox1
             // 
@@ -187,14 +192,31 @@
             this.webBrowser1.Location = new System.Drawing.Point(246, 64);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
             this.webBrowser1.Size = new System.Drawing.Size(856, 565);
             this.webBrowser1.TabIndex = 11;
+            // 
+            // btnTmp3
+            // 
+            this.btnTmp3.Location = new System.Drawing.Point(861, 27);
+            this.btnTmp3.Name = "btnTmp3";
+            this.btnTmp3.Size = new System.Drawing.Size(75, 23);
+            this.btnTmp3.TabIndex = 12;
+            this.btnTmp3.Text = "TMP3";
+            this.btnTmp3.UseVisualStyleBackColor = true;
+            this.btnTmp3.Click += new System.EventHandler(this.btnTmp3_Click);
+            // 
+            // tmrCheckURL
+            // 
+            this.tmrCheckURL.Enabled = true;
+            this.tmrCheckURL.Tick += new System.EventHandler(this.tmrCheckURL_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1114, 644);
+            this.Controls.Add(this.btnTmp3);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnSearch);
@@ -239,6 +261,8 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Button btnTmp3;
+        private System.Windows.Forms.Timer tmrCheckURL;
     }
 }
 
