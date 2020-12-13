@@ -27,5 +27,15 @@ namespace Creatine
 
             lstItems.DataSource = File.ReadAllLines("items.txt");
         }
+
+        private void lstItems_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (cboServiceList.SelectedItem == "Youtube Lucky")
+            {
+                webBrowser1.Navigate("http://steeky.com/creatine/youtube_search.php?q="+lstItems.SelectedItem);
+            }
+
+        }
     }
 }

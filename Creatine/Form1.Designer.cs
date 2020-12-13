@@ -30,10 +30,10 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.radioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importTxtFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createNewPlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.radioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cboLists = new System.Windows.Forms.ComboBox();
             this.cboServiceList = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -71,6 +71,18 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // importTxtFileToolStripMenuItem
+            // 
+            this.importTxtFileToolStripMenuItem.Name = "importTxtFileToolStripMenuItem";
+            this.importTxtFileToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.importTxtFileToolStripMenuItem.Text = "Import Txt File";
+            // 
+            // createNewPlaylistToolStripMenuItem
+            // 
+            this.createNewPlaylistToolStripMenuItem.Name = "createNewPlaylistToolStripMenuItem";
+            this.createNewPlaylistToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.createNewPlaylistToolStripMenuItem.Text = "Create New Playlist";
+            // 
             // tVToolStripMenuItem
             // 
             this.tVToolStripMenuItem.Name = "tVToolStripMenuItem";
@@ -82,18 +94,6 @@
             this.radioToolStripMenuItem.Name = "radioToolStripMenuItem";
             this.radioToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.radioToolStripMenuItem.Text = "Radio";
-            // 
-            // importTxtFileToolStripMenuItem
-            // 
-            this.importTxtFileToolStripMenuItem.Name = "importTxtFileToolStripMenuItem";
-            this.importTxtFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.importTxtFileToolStripMenuItem.Text = "Import Txt File";
-            // 
-            // createNewPlaylistToolStripMenuItem
-            // 
-            this.createNewPlaylistToolStripMenuItem.Name = "createNewPlaylistToolStripMenuItem";
-            this.createNewPlaylistToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.createNewPlaylistToolStripMenuItem.Text = "Create New Playlist";
             // 
             // cboLists
             // 
@@ -134,6 +134,7 @@
             this.lstItems.Name = "lstItems";
             this.lstItems.Size = new System.Drawing.Size(228, 134);
             this.lstItems.TabIndex = 5;
+            this.lstItems.SelectedIndexChanged += new System.EventHandler(this.lstItems_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
